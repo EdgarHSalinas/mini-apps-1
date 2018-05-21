@@ -1,2 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <script>
+      function initElement() {
+        var p = document.getElementById("foo");
+        // NOTE: showAlert(); or showAlert(param); will NOT work here.
+        // Must be a reference to a function name, not a function call.
+        p.onclick = showAlert;
+      };
 
+      function showAlert(event) {
+        alert("onclick Event detected!");
+      }
+    </script>
+    <style>
+      #foo {
+        border: solid blue 2px;
+      }
+    </style>
+</head>
+<body onload="initElement();">
+  <span id="foo">My Event Element</span>
+    <p>click on the above element.</p>
+   <button>Start Game</button>
+
+   <button>Resest</button>
+   <div id = "app">
+     <h1>Tic Tac Toe</h1>
+
+     
+
+   </div>
+    
+   <div> 
+   <table>
+       <tr>
+           <td id="1"><button id="btn1">Click</button></td>
+           <td id="2">2</td>
+           <td id="3">3</td>
+       </tr>
+       <tr>
+           <td>4</td>
+           <td>5</td>
+           <td>6</td>
+       </tr>
+       <tr>
+           <td>7</td>
+           <td>8</td>
+           <td>9</td>
+       </tr>
+
+
+   </table>
+   </div>
+
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function(event) {
+         console.log("DOM fully loaded and parsed");
+    });
+
+    for(var i=0; i<1000000000; i++)
+    {} // this synchronous script is going to delay parsing of the DOM. So the DOMContentLoaded event is going to launch later.
+</script>
+    <script src="./app.js"></script>
+</body>
+</html>
 
