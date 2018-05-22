@@ -1,0 +1,19 @@
+{
+  "name": "csv-report-generator",
+  "version": "1.0.0",
+  "description": "Post JSON data and receive it back in CSV format",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgarHSalinas/hrsf96-mini-apps-1.git"
+  },
+  "author": "Edgar Salinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdgarHSalinas/hrsf96-mini-apps-1/issues"
+  },
+  "homepage": "https://github.com/EdgarHSalinas/hrsf96-mini-apps-1#readme"
+}
