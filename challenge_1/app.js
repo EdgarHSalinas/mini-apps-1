@@ -1,19 +1,55 @@
+ function resetBoard() {
+        var p = document.getElementById("won");
+        p.onclick = showAlert;
+
+        var boardsState = {
+                    '0': false,
+                    '1': null,
+                    '2': false,
+                    '3': false,
+                    '4': null,
+                    '5': false,
+                    '6': false,
+                    '7': null,
+                    '8': false
+                };
+      for (var key in boardsState) {
+      
+          clearState(key, boardsState[key]);
+      }
+      
+     
+    };
+
+    function showAlert(event) {
+      alert('You have Won! ');
+    }
+
+function clearState(key, state) {
+         state = '';
+         var node = document.getElementById(key);
+         node.innerHTML = state;
+         
+}
+         
+
 var state = "O";
 var player;
 
 var boardsState = {
             '0': false,
-            '1': false,
+            '1': null,
             '2': false,
             '3': false,
-            '4': false,
+            '4': null,
             '5': false,
             '6': false,
-            '7': false,
+            '7': null,
             '8': false
         }
 
 var count = 0;
+
 
 
 function clickedBox(event) {
@@ -22,13 +58,13 @@ function clickedBox(event) {
              alert('Full Board! Play Again');
          }
          var that = this;
-         console.log(that);
+     
          window.addEventListener('click', function(event) {
 
            var box = event.target.id;
-           console.log(box);
+
            
-           if (boardsState[box] === false) {
+           if (boardsState[box] === null || boardsState[box] === false) {
               if (state === "X") {
                 state = "O";
            } else {
@@ -37,17 +73,18 @@ function clickedBox(event) {
            }
 
            
-           console.log(state);
            boardsState[box] = state;
 
-     
-
+          
 
            updateState(box, state);
-           checkForWin(boardsState);
-        
+
+           
+           
          });
      }
+
+   
 
 function updateState(box, state) {
          var node = document.getElementById(box);
@@ -55,6 +92,14 @@ function updateState(box, state) {
          
          var node = document.getElementById('player');
          
+        if (checkForWin(boardsState) === 1) {
+          node.innerHTML = player;
+          var node = document.getElementById('won');
+          var win = 'You have won ' + player;
+          return node.innerHTML = win;
+               
+        }
+           
          if (state === 'X') {
            player = "Player O";
          } else {
@@ -65,13 +110,47 @@ function updateState(box, state) {
      };
 
 function checkForWin(boardsState){
-    var obj = boardsState;
-
-    for (var key in obj) {
-       if ()
-      console.log(key, obj[key]);
+    // for (key in boardsState) {
+    //   if (boardsState[])
+    // }
+    
+    if ( (boardsState[0] === boardsState[1] && boardsState[1] === boardsState[2]) || 
+         (boardsState[3] === boardsState[4] && boardsState[4] === boardsState[5]) || 
+         (boardsState[6] === boardsState[7] && boardsState[7] === boardsState[8]) ||
+         (boardsState[0] === boardsState[4] && boardsState[4] === boardsState[8]) ||
+         (boardsState[2] === boardsState[4] && boardsState[4] === boardsState[6]) ) {
+// debugger;
+          return 1;
+    } else {
+        return false;
     }
 }
+
+
+ 
+    // var winningOptions = [
+    //     [0, 1, 2],
+    //     [3, 4, 5],
+    //     [6, 7, 8],
+    //     [0, 4, 8],
+    //     [2, 4, 6]
+    // ]
+    // var arrX = [];
+    // var arrO = [];
+    // for (var key in obj) {
+    //   if (key == "X") {
+    //       arrX.push([obj[key],"X"]);
+    //   } else if (key == "O") {
+    //       arrO.push([obj[key],"Y"]);
+    //   }
+       
+    // }  
+    //    for (var i = 0; i < winningOptions.length; i++) {
+    //      var row = winningOptions[i];
+
+    //    }
+ 
+
 
 
 // class TicTacToe {
