@@ -10,10 +10,11 @@
  <!-- Simple form which will send a POST request -->
    <form  action="" method="post" onsubmit="return false">
      <h3>JSON to CSV Converter</h3>
-     <textarea name="textarea" rows="10" cols="50">Paste JSON data here!!</textarea>
-     
-     <button id="form" type="submit" name="myButton" value="">Send JSON</button>
+     <textarea id="txt"name="textarea" rows="10" cols="50"></textarea>
+     <button id="form" type="submit" name="myButton" value="textarea">Send JSON</button>
    </form>
+   <h3>Results cCSV Format</h3>
+   <textarea id="csv" name="txtarea" rows="10" cols="50"></textarea>
    <script src="./app.js"></script>
 </body>
 </html>

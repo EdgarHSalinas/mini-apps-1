@@ -1,4 +1,4 @@
-var data = {'bob':'foo','paul':'dog'};
+
 var url = 'http://localhost:3000/';
 
 (function($) {
@@ -8,12 +8,17 @@ var url = 'http://localhost:3000/';
       data: data,
       type: 'post',
       dataType : 'json',
-
+      success: function(response) {
+        data = $('csv').response; 
+      }
     });
 
     e.preventDefault();
   }
-  $("form").submit(processForm);
+  $("#form").submit(function() {
+    var data = $('#txt').val();
+    processForm();
+  });
 })(jQuery);
 
 console.log("JQuery Logged")
