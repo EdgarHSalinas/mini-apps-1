@@ -1,0 +1,9 @@
+'use strict';
+
+// import React from '../public/react.development.js';
+// import ReactDom from '../public/react-dom.development.js';
+// import App from 'App.jsx';
+
+console.log('React App JSX');
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2NsaWVudC9pbmRleC5qcyJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIiwiUmVhY3RET00iLCJyZW5kZXIiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTs7QUFFQUEsUUFBUUMsR0FBUixDQUFZLGVBQVo7QUFDQUMsU0FBU0MsTUFBVCxDQUNBLG9CQUFDLEdBQUQsT0FEQSxFQUNTQyxTQUFTQyxjQUFULENBQXdCLEtBQXhCLENBRFQiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgUmVhY3QgZnJvbSAnLi4vcHVibGljL3JlYWN0LmRldmVsb3BtZW50LmpzJztcbi8vIGltcG9ydCBSZWFjdERvbSBmcm9tICcuLi9wdWJsaWMvcmVhY3QtZG9tLmRldmVsb3BtZW50LmpzJztcbi8vIGltcG9ydCBBcHAgZnJvbSAnQXBwLmpzeCc7XG5cbmNvbnNvbGUubG9nKCdSZWFjdCBBcHAgSlNYJyk7XG5SZWFjdERPTS5yZW5kZXIoXG48QXBwIC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJykpO1xuXG5cblxuXG4iXX0=

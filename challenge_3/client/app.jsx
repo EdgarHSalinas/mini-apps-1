@@ -1,11 +1,16 @@
-// import React from '../public/react.development.js';
+// import React from "../public/react.development.js";
 // import ReactDom from '../public/react-dom.development.js';
 
-console.log('React App JSX');
-ReactDOM.render(
- <h1>Checkout!</h1>, document.getElementById('app')
-);
+class App extends React.Component {
+  
+  render() {
+   console.log('APP ***************');
+   return (
+     <div className="App">
+       <h1>Checkout Form</h1>
+     </div>
+   );
+  }
+}
 
-
-
-
+window.App = App;
