@@ -1,0 +1,32 @@
+{
+  "name": "multi-step-checkout-react-express",
+  "version": "1.0.0",
+  "description": "SPA takes users through a series of forms to simulate a shopping experience",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js && babel client --out-dir public --presets=env,react --source-maps inline --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgarHSalinas/hrsf96-mini-apps-1.git"
+  },
+  "keywords": [
+    "React",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Edgar Salinas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdgarHSalinas/hrsf96-mini-apps-1/issues"
+  },
+  "homepage": "https://github.com/EdgarHSalinas/hrsf96-mini-apps-1#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
